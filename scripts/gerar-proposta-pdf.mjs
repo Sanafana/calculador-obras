@@ -176,13 +176,6 @@ async function gerarPdf() {
   const cmd = `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --print-to-pdf="${pdfPath}" --no-pdf-header-footer "${htmlPath}"`;
   execSync(cmd, { stdio: "inherit" });
   
-  // Also copy to VetraSolar/Propostas
-  try {
-    execSync(`cp "${pdfPath}" "${vetraPdfPath}"`);
-  } catch (e) {
-    console.error("Erro a copiar para VetraSolar:", e);
-  }
-
   console.log("PDF Proposta Comercial gerado com sucesso em:", pdfPath);
 }
 

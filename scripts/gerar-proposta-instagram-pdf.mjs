@@ -160,12 +160,6 @@ async function gerarPdf() {
   const cmd = `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --print-to-pdf="${pdfPath}" --no-pdf-header-footer "${htmlPath}"`;
   execSync(cmd, { stdio: "inherit" });
 
-  try {
-    execSync(`cp "${pdfPath}" "${vetraPdfPath}"`);
-  } catch (e) {
-    console.error("Erro ao copiar para VetraSolar:", e);
-  }
-
   console.log("PDF Proposta Instagram Automático gerado com sucesso em:", pdfPath);
 }
 

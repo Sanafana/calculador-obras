@@ -149,13 +149,6 @@ ${fecharDocumento}
   const cmd = `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --print-to-pdf="${pdfPath}" --no-pdf-header-footer "${htmlPath}"`;
   execSync(cmd, { stdio: "inherit" });
 
-  // Copy to VetraSolar/Propostas too
-  try {
-    execSync(`cp "${pdfPath}" "${vetraPdfPath}"`);
-  } catch (e) {
-    console.error("Erro a copiar para VetraSolar:", e);
-  }
-
   console.log("PDF Guia Explicativo gerado com sucesso em:", pdfPath);
 }
 
