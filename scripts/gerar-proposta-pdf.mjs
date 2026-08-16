@@ -4,7 +4,7 @@ import { abrirDocumento, fecharDocumento, estilos, COR, PROPONENTE } from "./mar
 
 const REF = "PROP-2026-OBR";
 const DATA = "16 de agosto de 2026";
-const DEMO = "http://localhost:3000";
+const DEMO = "https://calculador-obras.vercel.app";
 
 const html = `<!doctype html>
 <html lang="pt-PT">
